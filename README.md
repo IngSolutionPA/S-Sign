@@ -17,14 +17,13 @@ Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 
 5.	Descargar el proyecto https://github.com/IngSolutionPA/S-Sign.git
  
-6.	Descomprimir y guardar en una ruta por ejemplo
-C:\Users\Administrador\Desktop\S-SIGN
+6.	Descomprimir y guardar en tu equipo
 
 ### Instalación
 
-`mvn clean install`
+7.	Abrir cmd en la ruta donde guardaste el proyecto y escribe `mvn clean install`
 
-Este comando generará todos los módulos básicos del proyecto.
+Este comando generará todos los módulos básicos del proyecto, finalmente visualizaremos  `[INFO] BUILD SUCCESS`.
 
 ### Artefactos desplegables y aplicaciones
 
