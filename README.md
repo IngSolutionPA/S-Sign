@@ -29,7 +29,13 @@ Este comando generará todos los módulos básicos del proyecto, finalmente visu
 
 `mvn clean install -Denv=install`
 
-Este comando generará los jar.
+Con esto, se podrán construir los artefactos (JAR / WAR):
+
+afirma-server-triphase-signer: WAR con el servicio para la generación de firmas trifásicas.
+afirma-signature-retriever: WAR con el servicio de recuperación de datos del servidor intermedio.
+afirma-signature-storage: WAR con el servicio de guardado de datos en el servidor intermedio.
+afirma-simple: JAR autoejecutable de AutoFirma (AutoFirma.jar).
+afirma-ui-simple-configurator: JAR autoejecutable del configurador necesario para la instalación de AutoFirma (AutoFirmaConfigurador.jar).
 
 
 ### Módulos vigentes
