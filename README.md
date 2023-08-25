@@ -1,5 +1,5 @@
 
-# Cliente @firma
+# S-Sign
 
 El Cliente @firma es uno de los productos de la Suite @firma de soluciones de identificación y firma electrónica. Se proporciona de a las Administraciones Públicas para que dispongan de los instrumentos necesarios para implementar la autenticación y firma electrónica avanzada de una forma rápida y efectiva.
 
@@ -86,29 +86,3 @@ A continuación, se muestra un listado de los distintos módulos actualmente en 
 * `afirma-ui-core-jse-keystores`: Módulo con la interfaz gráfica del diálogo de selección de certificados.
 * `afirma-ui-miniapplet-deploy`: Módulo principal para el desarrollo de AutoScript.
 * `afirma-ui-simple-configurator`: Módulo principal de la aplicación de configuración ejecutada durante la instalación de AutoFirma.
-
-### Módulos sin mantenimiento
-
-La lista de módulos obsoletos y/o sin soporte que se conservan en el repositorio son los siguientes:
-
-* `afirma-crypto-cipher`: __Obsoleto.__ Módulo con las clases para el cifrado sincrono y asíncrono de datos usado en el antiguo Applet de @firma y StandAlone.
-* `afirma-crypto-cms-enveloper`: __Obsoleto.__ Módulo con la lógica para la generación de sobre digitales CMS utilizada en los antiguos Applet de @firma y StandAlone.
-* `afirma-crypto-core-pkcs7-tsp`: __Sin soporte.__ Módulo con la lógica para agregar sellos de siempre a firmas PKCS#7 
-* `afirma-crypto-jarverifier`: __Obsoleto.__ Módulo para la comprobación de la integridad de un JAR utilizada en el antiguo Applet de @firma.
-* `afirma-crypto-pdf-enhancer`: __Obsoleto.__ Módulo con un cliente SOAP para el envío de peticiones a @firma para la actualización de PDF a formatos longevos.
-* `afirma-keystores-capiaddressbook`: __Obsoleto.__ Módulo con la lógica de acceso a la libreta de direcciones de Windows.
-* `afirma-keystores-single`: __Obsoleto.__ Módulo con un proveedor criptográfico para la gestión de certificados sueltos como si fuesen almacenes.
-* `afirma-miniapplet-report`: __Obsoleto.__ Módulo para la generación de informes de las pruebas del antiguo MiniApplet.
-* `afirma-miniapplet-store-testdata`: __Obsoleto.__ Módulo para el guardado de los datos de los informes de las pruebas del antiguo MiniApplet.
-* `afirma-report-fail-tests`: __Obsoleto.__ Módulo para la notificación de errores de las pruebas del antiguo MiniApplet.
-* `afirma-server-simple-webstart`: __Obsoleto.__ Módulo principal del servicio para la generación del JNLP para la ejecución de AutoFirma WebStart.
-* `afirma-standalone`: __Obsoleto.__ Módulo principal de la antigua herramienta de escritorio StandAlone.
-* `afirma-standalone-installer`: __Obsoleto.__ Módulo con los componentes para la generación del instalador de la antigua herramienta de escritorio StandAlone.
-* `afirma-ui-applet`: __Obsoleto.__ Módulo principal del antiguo Applet de @firma.
-* `afirma-ui-applet-deploy`: __Obsoleto.__ Módulo con el JavaScript de despliegue del antiguo Applet de @firma.
-* `afirma-ui-miniapplet`: __Obsoleto.__ Módulo principal del antiguo MiniApplet.
-* `afirma-ui-simple-webstart`: __Obsoleto.__ Módulo principal del antiguo empaquetado de AutoFirma como aplicación WebStart,
-* `afirma-windows-store`: __Obsoleto.__ Módulo principal del antiguo cliente de firma para Windows 8.
-
-No se ofrece ningún tipo de mantenimiento ni soporte sobre estos módulos.
-
