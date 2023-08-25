@@ -1,21 +1,28 @@
 
-# S-Sign
+# S-Sign 
 
-El Cliente S-Sign es uno de los productos de la Suite S-Sign de soluciones de identificación y firma electrónica. Se proporciona de a las Administraciones Públicas para que dispongan de los instrumentos necesarios para implementar la autenticación y firma electrónica avanzada de una forma rápida y efectiva.
+### Configuración preliminar
 
-El cliente de firma es una herramienta de firma electrónica en entornos de escritorio y dispositivos móviles, que funciona en forma de Applet de Java integrado en una página Web mediante JavaScript, como aplicación de escritorio, o como aplicación móvil, dependiendo del entorno del usuario.
+1.	Descargar SDK en https://www.oracle.com/java/technologies/downloads/
+2.	Descargar NETBEANS https://netbeans.apache.org/download/
+3.	Agregar las siguientes variables de entorno:
 
-Es software libre con licencia GPL 2+ y EUPL 1.1. Puede consular más información y el código del producto en la forja del CTT.
+Variable 1:  `{ 'Nombre': 'JAVA_HOME', ' Valor' : 'C:\Program Files\Java\jdk-20'}`
 
-## Construcción del Cliente @firma
+Variable 2:  `{'Nombre': 'M2_HOME', ' Valor' : 'C:\Program Files\NetBeans-18\netbeans\java\maven'}`
 
-Los módulos del Cliente S-Sign se encuentran preparados para su compilación y empaquetado mediante Apache Maven. A continuación se indican los distintos parámetros a utilizar para construir sus artefactos según el uso que se desee dar.
+Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 
-A cualquiera de los comandos que se indican se le puede agregar el parámetro `-DskipTests` para omitir los tests JUnit.
+4.	Editar la variable Path y agregar:
 
-### Módulos básicos
+•	%JAVA_HOME%\bin
+•	%M2%
+5.	Descargar del repositorio git el proyecto de autofirma https://github.com/IngSolutionPA/S-Sign.git
+ 
+6.	Descomprimir y guardar en una ruta por ejemplo
+C:\Users\Administrador\Desktop\S-SIGN
 
-Los módulos del Cliente S-Sign incluidos en este repositorio se pueden construir mediante el siguiente comando de Maven.
+### Instalación
 
 `mvn clean install`
 
@@ -23,27 +30,10 @@ Este comando generará todos los módulos básicos del proyecto.
 
 ### Artefactos desplegables y aplicaciones
 
-Para la construcción de AutoFirma (JAR) y los servicios que utiliza será necesario usar el perfil `env-install`. Este se puede activar mediante el comando:
-
 `mvn clean install -Denv=install`
 
-Con esto, se podrán construir los artefactos:
+Este comando generará los jar.
 
-* `afirma-server-triphase-signer`: WAR con el servicio para la generación de firmas trifásicas.
-* `afirma-signature-retriever`: WAR con el servicio de recuperación de datos del servidor intermedio.
-* `afirma-signature-storage`: WAR con el servicio de guardado de datos en el servidor intermedio.
-* `afirma-simple`: JAR autoejecutable de AutoFirma (`AutoFirma.jar`).
-* `afirma-ui-simple-configurator`: JAR autoejecutable del configurador necesario para la instalación de AutoFirma (`AutoFirmaConfigurador.jar`).
-
-### Despliegue en repositorio de artefactos
-
-Para el despliegue de los distintos módulos en un repositorio de artefactos, además de la construcción de los los propios artefactos, es necesario aportar el código fuente de la aplicación, su JavaDoc y firmar los distintos artefactos. Para evitar generar estos recursos y realizar la firma de los artefactos para la operativa ordinaria de compilación y empaquetado se ha creado un perfil `env-deploy` para que se utilice sólo cuando se va a proceder al despliegue de los artefactos en un repositorio. Se puede hacer eso mediante el comando:
-
-`mvn clean deploy -Denv=deploy`
-
-## Módulos del proyecto
-
-El proyecto está formado por múltiples módulos, algunos de los cuales se utilizan en varias de las aplicaciones del Cliente @firma. Otros son los módulos de las propias aplicaciones o con recursos necesarios para su construcción o su uso.
 
 ### Módulos vigentes
 
