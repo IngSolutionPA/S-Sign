@@ -21,13 +21,13 @@ Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 
 ### Instalación
 
-* 	Abrir cmd en la ruta donde se guardo el proyecto y escribir `mvn clean install`
+* 	Abrir cmd en la ruta donde se guardo el proyecto y escribir `mvn clean install -DskipTests`
 
 Este comando generará todos los módulos básicos del proyecto, finalmente visualizaremos  `[INFO] BUILD SUCCESS`.
 
 ### Artefactos desplegables y aplicaciones
 
-* Luego debemos construir los artefactos (JAR / WAR), para ello escribimos en la consola `mvn clean install -Denv=install`
+* Luego debemos construir los artefactos (JAR / WAR), para ello escribimos en la consola `mvn clean install -Denv=install -DskipTests`
 
 Con esto, generamos lo siguiente:
 
