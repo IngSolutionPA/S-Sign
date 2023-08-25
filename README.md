@@ -1,7 +1,7 @@
 
 # S-Sign
 
-El Cliente @firma es uno de los productos de la Suite @firma de soluciones de identificación y firma electrónica. Se proporciona de a las Administraciones Públicas para que dispongan de los instrumentos necesarios para implementar la autenticación y firma electrónica avanzada de una forma rápida y efectiva.
+El Cliente S-Sign es uno de los productos de la Suite S-Sign de soluciones de identificación y firma electrónica. Se proporciona de a las Administraciones Públicas para que dispongan de los instrumentos necesarios para implementar la autenticación y firma electrónica avanzada de una forma rápida y efectiva.
 
 El cliente de firma es una herramienta de firma electrónica en entornos de escritorio y dispositivos móviles, que funciona en forma de Applet de Java integrado en una página Web mediante JavaScript, como aplicación de escritorio, o como aplicación móvil, dependiendo del entorno del usuario.
 
@@ -9,13 +9,13 @@ Es software libre con licencia GPL 2+ y EUPL 1.1. Puede consular más informaci�
 
 ## Construcción del Cliente @firma
 
-Los módulos del Cliente @firma se encuentran preparados para su compilación y empaquetado mediante Apache Maven. A continuación se indican los distintos parámetros a utilizar para construir sus artefactos según el uso que se desee dar.
+Los módulos del Cliente S-Sign se encuentran preparados para su compilación y empaquetado mediante Apache Maven. A continuación se indican los distintos parámetros a utilizar para construir sus artefactos según el uso que se desee dar.
 
 A cualquiera de los comandos que se indican se le puede agregar el parámetro `-DskipTests` para omitir los tests JUnit.
 
 ### Módulos básicos
 
-Los módulos del Cliente @firma incluidos en este repositorio se pueden construir mediante el siguiente comando de Maven.
+Los módulos del Cliente S-Sign incluidos en este repositorio se pueden construir mediante el siguiente comando de Maven.
 
 `mvn clean install`
 
