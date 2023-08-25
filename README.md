@@ -3,7 +3,7 @@
 
 ### Configuración preliminar
 
-* 	Descargar SDK en https://www.oracle.com/java/technologies/downloads/
+* 	Descargar SDK en https://www.oracle.com/java/technologies/downloads/ (JAVA VERSION 11)
 * 	Descargar NETBEANS https://netbeans.apache.org/download/
 * 	Agregar las siguientes variables de entorno:
 
