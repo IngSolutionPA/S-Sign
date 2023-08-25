@@ -1,3 +1,4 @@
+
 # Cliente @firma
 
 El Cliente @firma es uno de los productos de la Suite @firma de soluciones de identificación y firma electrónica. Se proporciona de a las Administraciones Públicas para que dispongan de los instrumentos necesarios para implementar la autenticación y firma electrónica avanzada de una forma rápida y efectiva.
@@ -110,3 +111,4 @@ La lista de módulos obsoletos y/o sin soporte que se conservan en el repositori
 * `afirma-windows-store`: __Obsoleto.__ Módulo principal del antiguo cliente de firma para Windows 8.
 
 No se ofrece ningún tipo de mantenimiento ni soporte sobre estos módulos.
+
