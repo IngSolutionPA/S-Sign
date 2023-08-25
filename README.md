@@ -15,7 +15,7 @@ Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 
 4.	Editar la variable `Path` y agregar: `%JAVA_HOME%\bin` y `%M2%`
 
-5.	Descargar del repositorio git el proyecto S-Sign https://github.com/IngSolutionPA/S-Sign.git
+5.	Descargar el proyecto https://github.com/IngSolutionPA/S-Sign.git
  
 6.	Descomprimir y guardar en una ruta por ejemplo
 C:\Users\Administrador\Desktop\S-SIGN
