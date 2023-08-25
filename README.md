@@ -3,9 +3,9 @@
 
 ### Configuración preliminar
 
-1.	Descargar SDK en https://www.oracle.com/java/technologies/downloads/
-2.	Descargar NETBEANS https://netbeans.apache.org/download/
-3.	Agregar las siguientes variables de entorno:
+* 	Descargar SDK en https://www.oracle.com/java/technologies/downloads/
+* 	Descargar NETBEANS https://netbeans.apache.org/download/
+* 	Agregar las siguientes variables de entorno:
 
 Variable 1:  `{ 'Nombre': 'JAVA_HOME', ' Valor' : 'C:\Program Files\Java\jdk-20'}`
 
@@ -13,15 +13,15 @@ Variable 2:  `{'Nombre': 'M2_HOME', ' Valor' : 'C:\Program Files\NetBeans-18\net
 
 Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 
-4.	Editar la variable `Path` y agregar: `%JAVA_HOME%\bin` y `%M2%`
+* 	Editar la variable `Path` y agregar: `%JAVA_HOME%\bin` y `%M2%`
 
-5.	Descargar el proyecto https://github.com/IngSolutionPA/S-Sign.git
+* 	Descargar el proyecto https://github.com/IngSolutionPA/S-Sign.git
  
-6.	Descomprimir y guardar en tu equipo
+* 	Descomprimir y guardar en tu equipo
 
 ### Instalación
 
-7.	Abrir cmd en la ruta donde guardaste el proyecto y escribe `mvn clean install`
+* 	Abrir cmd en la ruta donde guardaste el proyecto y escribe `mvn clean install`
 
 Este comando generará todos los módulos básicos del proyecto, finalmente visualizaremos  `[INFO] BUILD SUCCESS`.
 
