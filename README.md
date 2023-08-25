@@ -24,6 +24,38 @@ Variable 3:  `{'Nombre': 'M2', ' Valor' : ' %M2_HOME%\bin'}`
 * 	Abrir cmd en la ruta donde se guardo el proyecto y escribir `mvn clean install`
 
 Este comando generará todos los módulos básicos del proyecto, finalmente visualizaremos  `[INFO] BUILD SUCCESS`.
+* `afirma-client`.................................. SUCCESS
+* `afirma-core`.................................... SUCCESS
+* `afirma-core-keystores`.......................... SUCCESS
+* `afirma-crypto-batch-client`..................... SUCCESS
+* `afirma-crypto-cadestri-client`.................. SUCCESS
+* `afirma-crypto-core-pkcs7`....................... SUCCESS
+* `afirma-crypto-core-pkcs7-tsp`................... SUCCESS
+* `afirma-crypto-cades`............................ SUCCESS
+* `afirma-crypto-cades-multi`...................... SUCCESS
+* `afirma-crypto-cms`.............................. SUCCESS
+* `afirma-crypto-core-xml`......................... SUCCESS
+* `afirma-crypto-odf`.............................. SUCCESS
+* `afirma-crypto-pdf-common`....................... SUCCESS
+* `afirma-crypto-padestri`......................... SUCCESS
+* `afirma-crypto-pdf`.............................. SUCCESS
+* `afirma-crypto-xades`............................ SUCCESS
+* `afirma-crypto-xmlsignature`..................... SUCCESS
+* `afirma-crypto-ooxml`............................ SUCCESS
+* `afirma-crypto-validation`....................... SUCCESS
+* `afirma-crypto-xadestri-client`.................. SUCCESS
+* `afirma-keystores-filters`....................... SUCCESS
+* `afirma-keystores-mozilla`....................... SUCCESS
+* `afirma-ui-core-jse`............................. SUCCESS
+* `afirma-ui-core-jse-keystores`................... SUCCESS
+* `afirma-core-massive`............................ SUCCESS
+* `afirma-server-triphase-signer-cache`............ SUCCESS
+* `afirma-server-triphase-signer-core`............. SUCCESS
+* `afirma-server-triphase-signer-document`......... SUCCESS
+* `afirma-ui-simpleafirma-plugins`................. SUCCESS
+* `afirma-ui-simpleafirma-plugins-manager`......... SUCCESS
+* `afirma-ui-simpleafirma-plugin-hash`............. SUCCESS
+* `afirma-ui-simpleafirma-plugin-validatecerts`.... SUCCESS
 
 ### Artefactos desplegables y aplicaciones
 
