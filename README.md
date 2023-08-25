@@ -58,6 +58,7 @@ A continuación, se muestra un listado de los distintos módulos actualmente en 
 * `afirma-crypto-cadestri-client`: Módulo con lógica de invocación para la generación de firmas trifásicas CAdES en servidor.
 * `afirma-crypto-cms`: Módulo con la lógica de generación de las firmas CMS.
 * `afirma-crypto-core-pkcs7`: Módulo con la lógica básica de estructuras PKCS#7, necesarias para la generación de firmas ASN.1 (CAdES, PAdES, etc.).
+* `afirma-crypto-core-pkcs7-tsp`: Sin soporte. Módulo con la lógica para agregar sellos de siempre a firmas PKCS#7
 * `afirma-crypto-core-xml`: Módulo con la lógica básica de estructuras XML, necesarias para la generación de firmas XML (XAdES, ODF, OOXML, etc.).
 * `afirma-crypto-odf`: Módulo con la lógica de generación de las firmas ODF.
 * `afirma-crypto-ooxml`: Módulo con la lógica de generación de las firmas OOXML.
