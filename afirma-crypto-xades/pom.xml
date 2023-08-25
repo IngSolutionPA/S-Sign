@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>afirma-crypto-xades</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>afirma-crypto-xades</name>
+	<description>Modulo para la generacion de firmas XAdES</description>
+	
+	<parent>
+		<groupId>es.gob.afirma</groupId>
+		<artifactId>afirma-client</artifactId>
+		<version>1.9-SNAPSHOT</version>
+	</parent>
+	
+	<dependencies>
+	
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-core-xml</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+		
+		<dependency>
+  			<groupId>es.uji.crypto.xades</groupId>
+  			<artifactId>jxades</artifactId>
+		</dependency>
+
+		<!-- Para el sellado de tiempo -->		
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-core-pkcs7-tsp</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+		
+		<!--  Canonicalizador para el sello de tiempo -->
+		<dependency>
+	    		<groupId>com.io7m.xom</groupId>
+	    		<artifactId>xom</artifactId>
+	    		<version>1.2.10</version>
+	    		<exclusions>
+					<exclusion>
+						<groupId>xalan</groupId>
+						<artifactId>xalan</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>xml-apis</groupId>
+						<artifactId>xml-apis</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>xerces</groupId>
+						<artifactId>xercesImpl</artifactId>
+					</exclusion>
+	    		</exclusions>
+		</dependency>
+
+	</dependencies>
+</project>

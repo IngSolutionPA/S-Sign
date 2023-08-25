@@ -1,0 +1,56 @@
+{
+	"info": {
+		"name": "hash",
+		"title": "Huellas digitales",
+		"version_code": 1,
+		"version": "1.0",
+		"authors": [
+			"Gobierno de España"
+		],
+		"description": "Plugin para el cálculo y la comprobación de hashes.<br><br>El componente permite generar ficheros de hashes con el hash de un fichero o de todos los ficheros de un directorio. También permite comprobar que un fichero de hashes es válido seleccionando el fichero o directorio a partir del cuál se generó.<br><br>El plugin permite realizar las nuevas operaciones tanto desde interfaces gráficos como desde línea de comandos."
+	},
+	"permissions": ["INSTALL","RESET", "MENU", "COMMANDS"],
+	"menu": {
+		"title": "Huellas digitales",
+		"items": [
+			{
+				"title": "Fichero",
+				"items": [
+					{
+						"title": "Calcular huella digital",
+						"action": "es.gob.afirma.plugin.hash.action.CalculateHashFileAction"
+					},
+					{
+						"title": "Comprobar huella digital",
+						"action": "es.gob.afirma.plugin.hash.action.CheckHashFileAction"
+					}
+				]
+			},
+			{
+				"title": "Directorio",
+				"items": [
+					{
+						"title": "Calcular huella digital en directorio",
+						"action": "es.gob.afirma.plugin.hash.action.CalculateHashDirAction"
+					},
+					{
+						"title": "Comprobar huella digital en directorio",
+						"action": "es.gob.afirma.plugin.hash.action.CheckHashDirAction"
+					}
+				]
+			}
+		]
+	},
+	"commands": [
+		{
+			"name": "createdigest",
+			"description": "Creaci�n de huellas digitales con interfaz gr�fica",
+			"action": "es.gob.afirma.plugin.hash.command.CreateHashCommand"
+		},
+		{
+			"name": "checkdigest",
+			"description": "Comprobaci�n de huellas digitales con interfaz gr�fica",
+			"action": "es.gob.afirma.plugin.hash.command.CheckHashCommand"
+		}
+	]
+}

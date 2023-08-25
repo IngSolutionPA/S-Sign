@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>afirma-server-triphase-signer</artifactId>
+	<packaging>war</packaging>
+	
+	<name>afirma-server-triphase-signer</name>
+	<description>Servicio de firma trifasica</description>
+	
+	<parent>
+		<groupId>es.gob.afirma</groupId>
+		<artifactId>afirma-client</artifactId>
+		<version>1.9-SNAPSHOT</version>
+	</parent>
+	
+	<dependencies>
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-core</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-server-triphase-signer-cache</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-server-triphase-signer-core</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-server-triphase-signer-document</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>org.json</groupId>
+    		<artifactId>json</artifactId>
+    		<version>20230618</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-xadestri-client</artifactId>
+			<version>${clienteafirma.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>servlet-api</artifactId>
+    		<version>2.5</version>
+    		<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+	
+	<build>
+		<plugins>
+		
+			<!-- Plugin para obtener la fecha en la propiedad "current.date" para adjuntarla a la version -->
+			<plugin>
+			  <groupId>org.codehaus.mojo</groupId>
+			  <artifactId>build-helper-maven-plugin</artifactId>
+			  <version>1.12</version>
+			  <executions>
+			    <execution>
+			      <id>timestamp-property</id>
+			      <goals>
+			        <goal>timestamp-property</goal>
+			      </goals>
+			      <phase>validate</phase>
+			      <configuration>
+			        <name>current.date</name>
+			        <pattern>yyyy-MM-dd hh:mm</pattern>
+			      </configuration>
+			    </execution>
+			  </executions>
+			</plugin>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<fork>true</fork>
+<!-- 					
+					<compilerArgs>
+						<arg>-Xbootclasspath:${java.home}/lib/jsse.jar${path.separator}${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar</arg>
+					</compilerArgs>
+ -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>  
+					<archive>  
+						<addMavenDescriptor>false</addMavenDescriptor> 
+					</archive> 
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<wtpapplicationxml>true</wtpapplicationxml>
+					<wtpversion>2.0</wtpversion>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources/</directory>
+				<includes>
+					<include>version</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/</directory>
+				<excludes>
+					<exclude>*.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+</project>

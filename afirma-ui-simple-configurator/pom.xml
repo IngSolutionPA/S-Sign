@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>afirma-ui-simpleafirma-configurator</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>afirma-ui-simpleafirma-configurator</name>
+	<description>Aplicacion auxiliar de instalacion de AutoFirma</description>
+	
+	<parent>
+		<groupId>es.gob.afirma</groupId>
+		<artifactId>afirma-client</artifactId>
+		<version>1.9-SNAPSHOT</version>
+	</parent>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-core</artifactId>
+			<version>${clienteafirma.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>es.gob.afirma.lib</groupId>
+					<artifactId>afirma-lib-jmimemagic</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+		    <groupId>es.gob.afirma</groupId>
+		    <artifactId>afirma-ui-simpleafirma-plugins-manager</artifactId>
+		    <version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-keystores-mozilla</artifactId>
+			<version>${clienteafirma.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>es.gob.afirma.jmulticard</groupId>
+					<artifactId>jmulticard</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>es.gob.afirma.jmulticard</groupId>
+					<artifactId>jmulticard-jse</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>es.gob.afirma.jmulticard</groupId>
+					<artifactId>jmulticard-ui</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-ui-core-jse</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.madgag.spongycastle</groupId>
+		    <artifactId>core</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.madgag.spongycastle</groupId>
+		    <artifactId>bcpkix-jdk15on</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+	<profiles>
+	
+		<profile>
+			<id>env-dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+      		</activation>
+      		<build>
+       			<plugins>
+       				<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+							<fork>true</fork>
+							<compilerArgument>-XDignore.symbol.file</compilerArgument>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<configuration>
+							<archive>
+								<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+							</archive>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+	    </profile>
+	
+	    <profile>
+			<id>env-install</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>install</value>
+				</property>
+			</activation>
+		  
+			<build>
+				<finalName>AutoFirmaConfigurador</finalName>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<source>1.8</source> 
+							<target>1.8</target> 
+							<fork>true</fork>
+							<compilerArgs>
+								<arg>-XDignore.symbol.file</arg>
+							</compilerArgs>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-shade-plugin</artifactId>
+						<version>3.2.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>shade</goal>
+								</goals>
+								<configuration>
+									<filters>
+										<filter>
+											<artifact>*:*</artifact>
+											<excludes>
+												<exclude>META-INF/*.SF</exclude>
+												<exclude>META-INF/*.DSA</exclude>
+												<exclude>META-INF/*.RSA</exclude>
+											</excludes>
+										</filter>
+									</filters>
+									<transformers>
+										<transformer
+											implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+											<mainClass>es.gob.afirma.standalone.configurator.AutoFirmaConfigurator</mainClass>
+										</transformer>
+									</transformers>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<configuration>
+							<archive>
+								<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+							</archive>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+	
+		</profile>
+	</profiles>
+</project>

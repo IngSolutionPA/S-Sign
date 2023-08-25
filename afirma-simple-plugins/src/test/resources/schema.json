@@ -1,0 +1,106 @@
+
+{
+
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "info": {
+      "type": "object",
+      "properties": {
+        "name":		 			{ "type": "string" },
+        "title":				{ "type": "string" },
+        "version_code":			{ "type": "integer", "default": 1 },
+        "version":				{ "type": "string", "default": "1.0" },
+        "authors":				{
+        							"type": "array",
+          							"items": { "type": "string" },
+          							"default": []
+          						},
+        "contacts":				{
+        							"type": "array",
+          							"items": { "type": "string" },
+          							"default": []
+          						},
+        "description":			{ "type": "string" },
+        "configuration_panel":	{ "type": "string" }
+      },
+      "required": ["name", "title", "description"]
+    },
+    
+    "permissions": {
+	   	"type":		"array",
+		"items":	{
+						"type": "string",
+						"enum": [
+							"INSTALL",
+							"UNINSTALL",
+							"RESET",
+							"INLINE_PROCESS",
+							"PRESIGN",
+							"POSTSIGN",
+							"BUTTONS",
+							"MENU",
+							"COMMANDS" ]
+					},
+		"default":	[]
+    },
+
+    "button": {
+      "type": "object",
+      "properties": {
+        "title":				{ "type": "string" },
+        "icon":					{ "type": "string" },
+        "tooltip":				{ "type": "string" },
+        "accesible_description":{ "type": "string" },
+        "window":				{ "type": "string", "enum": [ "input", "single_result", "multi_result", "visor" ] },
+        "action":				{ "type": "string" }
+      },
+      "required": ["window", "action"]
+    },
+
+    "menu": {
+      "type": "object",
+      "properties": {
+        "title": 	{ "type": "string" },
+        "action":	{ "type": "string" },
+	    "items":	{ 
+				    	"type": "array",
+				        "items": { "$ref": "#/definitions/menu" },
+				        "default": []
+				    }
+      },
+      "required": ["title"]
+    },
+    
+    "command": {
+      "type": "object",
+      "properties": {
+        "name":					{ "type": "string" },
+        "description":			{ "type": "string" },
+        "action":				{ "type": "string" }
+      },
+      "required": ["name", "action"]
+    }
+  },
+
+  "type": "object",
+
+  "properties": {
+    "info": 			{ "$ref": "#/definitions/info" },
+    "permissions":		{ "$ref": "#/definitions/permissions" },
+    "inline_processor":	{ "type": "string" },
+    "menu":				{ "$ref": "#/definitions/menu" },
+    "buttons":			{ 
+				    		"type": "array",
+					        "items": { "$ref": "#/definitions/button" },
+					        "default": []
+					    },
+    "commands":			{ 
+					    	"type": "array",
+					        "items": { "$ref": "#/definitions/command" },
+					        "default": []
+					    }
+  },
+  
+  "required": ["info"]
+}

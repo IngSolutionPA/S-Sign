@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>afirma-ui-miniapplet</artifactId>
+	<packaging>jar</packaging>
+	
+	<name>afirma-ui-miniapplet</name>
+	<description>MiniApplet Afirma</description>
+	
+	<parent>
+		<groupId>es.gob.afirma</groupId>
+		<artifactId>afirma-client</artifactId>
+		<version>1.9-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<afirma.keytool.keystore>${basedir}/afirma.keystore</afirma.keytool.keystore>
+		<afirma.keytool.alias>codesign</afirma.keytool.alias>
+		<afirma.keytool.password>afirma</afirma.keytool.password>
+		<afirma.jar.name>miniapplet-full</afirma.jar.name>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-core</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-core-keystores</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-keystores-mozilla</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-keystores-filters</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-cades</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-cades-multi</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-core-pkcs7</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-core-pkcs7-tsp</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-cms</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-xades</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-core-xml</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-xmlsignature</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-pdf</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-odf</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-ooxml</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-ui-core-jse</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-ui-core-jse-keystores</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-cadestri-client</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-padestri-client</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-xadestri-client</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>es.gob.afirma</groupId>
+			<artifactId>afirma-crypto-batch-client</artifactId>
+			<version>${clienteafirma.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma.jmulticard</groupId>
+			<artifactId>jmulticard-jse</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma.lib</groupId>
+			<artifactId>afirma-lib-jmimemagic</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma.lib</groupId>
+			<artifactId>afirma-lib-juniversalchardet</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>es.gob.afirma.lib</groupId>
+			<artifactId>afirma-lib-oro</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.dmurph</groupId>
+			<artifactId>JGoogleAnalyticsTracker</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+
+		<!-- Perfil para la construccion de una version del MiniApplet distribuible (firmada con certificado de pruebas) -->
+		<profile>
+			<id>env-install</id>
+			<activation>
+				<property>
+		          <name>env</name>
+		          <value>install</value>
+				</property>
+			</activation>
+	
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<source>${jdk.version}</source>
+							<target>${jdk.version}</target>
+							<fork>true</fork>
+							<compilerArgument>-XDignore.symbol.file</compilerArgument>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-shade-plugin</artifactId>
+						<version>3.2.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>shade</goal>
+								</goals>
+								<configuration>
+									<transformers>
+										<transformer
+											implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+											<mainClass>es.gob.afirma.miniapplet.MiniAfirmaApplet</mainClass>
+										</transformer>
+									</transformers>
+								</configuration>
+							</execution>
+						</executions>
+						<configuration>
+							<archive>
+								<addMavenDescriptor>false</addMavenDescriptor>
+							</archive>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+										<exclude>*.crt</exclude>
+									</excludes>
+								</filter>
+								<filter>
+									<artifact>es.gob.afirma:afirma-keystores-mozilla</artifact>
+									<excludes>
+										<exclude>nss/**</exclude>
+									</excludes>
+								</filter>
+								<filter>
+									<artifact>net.java.xades:jxades</artifact>
+									<excludes>
+										<exclude>TrustRootCACertificates/**</exclude>
+										<exclude>*.*</exclude>
+									</excludes>
+								</filter>
+							</filters>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<configuration>
+							<archive>
+								<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+							</archive>
+							<excludes>
+								<exclude>**/nss/**</exclude>
+							</excludes>
+							<finalName>${afirma.jar.name}_${afirma.legible.version}</finalName>    
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<keystore>${afirma.keytool.keystore}</keystore>
+							<alias>${afirma.keytool.alias}</alias>
+							<storepass>${afirma.keytool.password}</storepass>
+							<verify>true</verify>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		
+		</profile>
+
+	
+		<!--  Si usamos Java 8 se puede ofuscar el codigo -->
+	    <profile>
+	      <id>env-install-java-8</id>
+	      <activation>
+	        <property>
+	          <name>env</name>
+	          <value>install_java8</value>
+	        </property>
+	        <jdk>1.8</jdk>
+	      </activation>
+
+		  <build>
+		  	<plugins>
+		  	
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${jdk.version}</source>
+						<target>${jdk.version}</target>
+						<fork>true</fork>
+						<compilerArgument>-XDignore.symbol.file</compilerArgument>
+					</configuration>
+				</plugin>
+	
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>3.2.1</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>shade</goal>
+							</goals>
+							<configuration>
+								<transformers>
+									<transformer
+										implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+										<mainClass>es.gob.afirma.miniapplet.MiniAfirmaApplet</mainClass>
+									</transformer>
+								</transformers>
+							</configuration>
+						</execution>
+					</executions>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+						<filters>
+							<filter>
+								<artifact>*:*</artifact>
+								<excludes>
+									<exclude>META-INF/*.SF</exclude>
+									<exclude>META-INF/*.DSA</exclude>
+									<exclude>META-INF/*.RSA</exclude>
+									<exclude>*.crt</exclude>
+								</excludes>
+							</filter>
+							<filter>
+								<artifact>es.gob.afirma:afirma-keystores-mozilla</artifact>
+								<excludes>
+									<exclude>nss/**</exclude>
+								</excludes>
+							</filter>
+							<filter>
+								<artifact>net.java.xades:jxades</artifact>
+								<excludes>
+									<exclude>TrustRootCACertificates/**</exclude>
+									<exclude>*.*</exclude>
+								</excludes>
+							</filter>
+						</filters>
+					</configuration>
+				</plugin>
+	
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<archive>
+							<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+						</archive>
+						<excludes>
+							<exclude>**/nss/**</exclude>
+						</excludes>
+						<finalName>${afirma.jar.name}_${afirma.legible.version}</finalName>    
+					</configuration>
+				</plugin>
+		  	
+				<plugin>
+					<groupId>com.github.wvengen</groupId>
+					<artifactId>proguard-maven-plugin</artifactId>
+					<version>2.0.14</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>proguard</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<proguardVersion>6.0.3</proguardVersion>
+						<injar>${afirma.jar.name}_${afirma.legible.version}.jar</injar>
+						<outputDirectory>${project.build.directory}</outputDirectory>
+						<proguardInclude>${basedir}/proguard.conf</proguardInclude>
+					
+						<libs>
+							<lib>${java.home}/lib/rt.jar</lib>
+							<lib>${java.home}/lib/jsse.jar</lib>
+							<lib>${java.home}/lib/jce.jar</lib>
+						</libs>
+					
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>net.sf.proguard</groupId>
+							<artifactId>proguard-base</artifactId>
+							<version>6.0.3</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			   
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>3.0.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>sign</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<keystore>${afirma.keytool.keystore}</keystore>
+						<alias>${afirma.keytool.alias}</alias>
+						<storepass>${afirma.keytool.password}</storepass>
+						<verify>true</verify>
+					</configuration>
+				</plugin>
+
+			  </plugins>
+			</build>
+		</profile>
+	
+	</profiles>
+</project>
