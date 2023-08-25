@@ -7,7 +7,7 @@
 * 	Descargar NETBEANS https://netbeans.apache.org/download/
 * 	Agregar las siguientes variables de entorno:
 
-Variable 1:  `{ 'Nombre': 'JAVA_HOME', ' Valor' : 'C:\Program Files\Java\jdk-20'}`
+Variable 1:  `{ 'Nombre': 'JAVA_HOME', ' Valor' : 'C:\Program Files\Java\jdk-11'}`
 
 Variable 2:  `{'Nombre': 'M2_HOME', ' Valor' : 'C:\Program Files\NetBeans-18\netbeans\java\maven'}`
 
