@@ -27,9 +27,9 @@ Este comando generará todos los módulos básicos del proyecto, finalmente visu
 
 ### Artefactos desplegables y aplicaciones
 
-`mvn clean install -Denv=install`
+* Luego debemos construir los artefactos (JAR / WAR), para ello escribimos en la consola `mvn clean install -Denv=install`
 
-Con esto, se podrán construir los artefactos (JAR / WAR):
+Con esto, generamos lo siguiente:
 
 * `afirma-server-triphase-signer`: WAR con el servicio para la generación de firmas trifásicas.
 * `afirma-signature-retriever`: WAR con el servicio de recuperación de datos del servidor intermedio.
