@@ -67,9 +67,9 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
    
    Registry:   https://nsis.sourceforge.io/Registry_plug-in
 
-o	Deberán localizarse los archivos .dll y .nsh según la siguiente jerarquía: 
+Descargamos y descomprimimos los archivos y copiamos los archivos .dll y .nsh según la siguiente jerarquía: 
 
-    NSIS/
+    C:\Program Files\NSIS
     ├── Include/
     │   └── nsProcess.nsh
     │   └── Registry.nsh
