@@ -46,9 +46,9 @@ Luego descargamos Launch4j, para la envoltura de los JAR de AutoFirma a modo de 
 * `https://sourceforge.net/projects/launch4j/files/launch4j-3/` (Última version disponible)
 
 Abrimos la aplicación y damos clic en el icono de carpeta para buscar los archivos .xml que estan en el directorio del módulo  `afirma-simple-installer`.
-    *  1. AutoFirma_launch4J_project_64.xml
-    *  2. AutoFirmaCommandLine_launch4J_project_64.xml
-    *  3. AutoFirma_launch4J_Configurador_project_64.xml
+   * `AutoFirma_launch4J_project_64.xml`
+   * `AutoFirmaCommandLine_launch4J_project_64.xml`
+   * `AutoFirma_launch4J_Configurador_project_64.xml`
 El proceso de construcción debe realizarse uno por uno, es decir debo ubicar el primer archivo .xml y luego dar clic en ejecutar para generar el .EXE en la carpeta AutoFirma64/
 
 ### Construcción del instalador para unificar los .EXE para windows
