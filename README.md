@@ -57,16 +57,40 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
     * `AutoFirmaCommandLine.exe`
     * `AutoFirmaConfigurador.exe`
 
-### Construcción del instalador windows
+### Construcción del instalador para windows
 
-http://nsis.sourceforge.net/Download
+ Descargamos y instalamos el programa NSIS: http://nsis.sourceforge.net/Download  (Verssión NSIS 3.x)
+ 
+ Es requerido instalar (2) plugins al NSIS:
 
-Se requieren también instalar los siguientes plugins al NSIS:
+   •	Plugin para permitir la detección y manipulación de procesos durante la instalación.
+           * `NsProcess` http://nsis.sourceforge.net/NsProcess_plugin
+   •	Plugin para permitir la búsqueda de entradas en el registro.   
+           * `Registry`  https://nsis.sourceforge.io/Registry_plug-in
 
- •	Plugin para permitir la detección y manipulación de procesos durante la instalación.
-      * `NsProcess` http://nsis.sourceforge.net/NsProcess_plugin
- •	Plugin para permitir la búsqueda de entradas en el registro.   
-      * `Registry`  https://nsis.sourceforge.io/Registry_plug-in
+o	Deberán localizarse los archivos .dll y .nsh según la siguiente jerarquía: 
+
+    NSIS/
+    ├── Include/
+    │   └── nsProcess.nsh
+    │   └── Registry.nsh
+    └── Plugins/
+        ├── x86-ansi/
+        │   └── nsProcess.dll
+        │   └── registry.dll
+        └── x86-unicode/
+            └── nsProcess.dll
+            └── registry.dll
+
+           
+
+Luego que hemos realizado la instalación correcta de los plugin podemos continuar con la instalación      
+    
+   * Abrimos el programa y damos clic en “Compile NSIS Script”. 
+   * Luego damos clic en File => Load Script y ubicamos el el archivo  `AutoFirma_NSIS_project_EXE_64.nsis `
+
+Este proceso generará en el directorio “AutoFirma64” el instalador `AutoFirma_64_vX_Y_Z_installer.exe`
+
       
 
 
