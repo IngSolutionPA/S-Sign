@@ -61,7 +61,7 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
 
  Descargamos y instalamos el programa NSIS: http://nsis.sourceforge.net/Download  (Versión NSIS 3.x)
  
- Es requerido instalar (2) plugins al NSIS:
+ Es requerido instalar (2) plugins adicionales al NSIS:
 
    NsProcess:  http://nsis.sourceforge.net/NsProcess_plugin
    
