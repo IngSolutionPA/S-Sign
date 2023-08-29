@@ -38,6 +38,35 @@ Con esto, generamos lo siguiente:
 * `afirma-ui-simple-configurator`: JAR autoejecutable del configurador necesario para la instalación de AutoFirma (AutoFirmaConfigurador.jar).
 
 
+### Construcción de los .EXE individuales
+
+Debemos copiar los archivos “AutoFirma.jar” y “AutoFirmaConfigurador.jar” al directorio “jar” del módulo  `afirma-simple-installer`.
+
+Luego descargamos Launch4j, para la envoltura de los JAR de AutoFirma a modo de EXE
+* `https://sourceforge.net/projects/launch4j/files/launch4j-3/` (Última version disponible)
+
+Abrimos la aplicación y damos clic en el icono de carpeta para buscar los archivos .xml que estan en el directorio del módulo  `afirma-simple-installer`.
+    1. AutoFirma_launch4J_project_64.xml
+    2. AutoFirmaCommandLine_launch4J_project_64.xml
+    3. AutoFirma_launch4J_Configurador_project_64.xml
+El proceso de construcción debe realizarse uno por uno, es decir debo ubicar el primer archivo .xml y luego dar clic en ejecutar para generar el .EXE en la carpeta AutoFirma64/
+
+### Construcción del instalador para unificar los .EXE para windows
+
+http://nsis.sourceforge.net/Download
+
+Se requieren también instalar los siguientes plugins al NSIS:
+
+ •	Plugin para permitir la detección y manipulación de procesos durante la instalación.
+      * `NsProcess` http://nsis.sourceforge.net/NsProcess_plugin
+ •	Plugin para permitir la búsqueda de entradas en el registro.   
+      * `Registry`  https://nsis.sourceforge.io/Registry_plug-in
+      
+
+
+
+
+
 ### Módulos vigentes
 
 A continuación, se muestra un listado de los distintos módulos actualmente en uso en el proyecto:
