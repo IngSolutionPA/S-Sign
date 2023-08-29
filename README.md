@@ -43,7 +43,8 @@ Con esto, generamos lo siguiente:
 Debemos copiar los archivos “AutoFirma.jar” y “AutoFirmaConfigurador.jar” al directorio “jar” del módulo  `afirma-simple-installer`.
 
 Luego descargamos Launch4j, para la envoltura de los JAR de AutoFirma a modo de EXE
-* `https://sourceforge.net/projects/launch4j/files/launch4j-3/` (Última version disponible)
+
+https://sourceforge.net/projects/launch4j/files/launch4j-3/ (Última version disponible)
 
 Abrimos la aplicación y damos clic en “Open configuration or import” (icono con el icono de carpeta), para ubicar el archivo .xml que estan en el directorio del módulo  `afirma-simple-installer` y luego dar clic en “Build wrapper” (botón con el icono de engranaje) para que inicie la creación del archivo .exe que será guardado en `AutoFirma64/`.
 
