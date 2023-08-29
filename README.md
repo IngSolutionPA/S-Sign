@@ -63,8 +63,8 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
  
  Es requerido instalar (2) plugins al NSIS:
 
-            NsProcess:  http://nsis.sourceforge.net/NsProcess_plugin
-            Registry: https://nsis.sourceforge.io/Registry_plug-in
+   NsProcess:  http://nsis.sourceforge.net/NsProcess_plugin
+   Registry:   https://nsis.sourceforge.io/Registry_plug-in
 
 o	Deberán localizarse los archivos .dll y .nsh según la siguiente jerarquía: 
 
