@@ -59,7 +59,7 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
 
 ### Construcción del instalador para windows
 
- Descargamos y instalamos el programa NSIS: http://nsis.sourceforge.net/Download  (Verssión NSIS 3.x)
+ Descargamos y instalamos el programa NSIS: http://nsis.sourceforge.net/Download  (Versión NSIS 3.x)
  
  Es requerido instalar (2) plugins al NSIS:
 
