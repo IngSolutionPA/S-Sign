@@ -57,7 +57,7 @@ El proceso debe repetirse para cada uno de los archivos .xml, para obtener los 3
     * `AutoFirmaCommandLine.exe`
     * `AutoFirmaConfigurador.exe`
 
-### Construcción del instalador para unificar los .EXE para windows
+### Construcción del instalador windows
 
 http://nsis.sourceforge.net/Download
 
