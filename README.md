@@ -83,10 +83,9 @@ Descargamos y descomprimimos los archivos y copiamos los archivos .dll y .nsh se
             └── registry.dll
 
            
-
 Luego que hemos realizado la instalación correcta de los plugin podemos continuar con la instalación      
     
-   * Abrimos el programa y damos clic en “Compile NSIS Script”. 
+   * Abrimos el programa NSIS y damos clic en “Compile NSIS Script”. 
    * Luego damos clic en File => Load Script y ubicamos el el archivo  `AutoFirma_NSIS_project_EXE_64.nsis `
 
 Este proceso generará en el directorio “AutoFirma64” el instalador `AutoFirma_64_vX_Y_Z_installer.exe`
