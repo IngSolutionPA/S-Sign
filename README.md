@@ -50,7 +50,9 @@ Abrimos la aplicación y damos clic en el icono de carpeta para buscar los archi
    * `AutoFirmaCommandLine_launch4J_project_64.xml`
    * `AutoFirma_launch4J_Configurador_project_64.xml`
      
-El proceso de construcción debe realizarse uno por uno, es decir debo ubicar el primer archivo .xml y luego dar clic en ejecutar para generar el .EXE en la carpeta AutoFirma64/
+El proceso de construcción debe realizarse uno por uno, es decir debo ubicar el primer archivo .xml y luego dar clic en “Build wrapper” (botón con el icono de engranaje) 
+
+Al realizar este proceso nos generará 3 archivos .EXE en la carpeta AutoFirma64/
 
 ### Construcción del instalador para unificar los .EXE para windows
 
