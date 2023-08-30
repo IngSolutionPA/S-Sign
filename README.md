@@ -90,11 +90,6 @@ Luego que hemos realizado la instalación de los plugins, podremos continuar.
 
 Este proceso generará en el directorio “AutoFirma64” el instalador `AutoFirma_64_vX_Y_Z_installer.exe`
 
-      
-
-
-
-
 
 ### Módulos vigentes
 
