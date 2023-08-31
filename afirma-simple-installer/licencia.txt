@@ -1,8 +1,8 @@
  
- AutoFirma 1.8.2
- Copyright 2011, 2023 Gobierno de España
+ S-sign 1.8.2
+ Copyright 2024 Órgano Judicial de Panamá
  
- AutoFirma es Software Libre; puedes redistribuirlo y/o modificarlo
+ S-sign fue construido y modificado en base al proyecto de código abierto de AutoFirma, dicho repositorio se encuentra ubicado en https://github.com/ctt-gob-es/clienteafirma.git el cual esta
  bajo los términos de al menos una de estas dos licencias;
 
    - La "GNU General Public License" tal como es publicada por la Free Software 
